@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/picture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/series_title" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_favorite_border"/>
+
+        <TextView
+            android:id="@+id/series_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/picture"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="The Walking Dead" />
+
+        <TextView
+            android:id="@+id/code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/series_title"
+            app:layout_constraintStart_toStartOf="@id/series_title"
+            app:layout_constraintTop_toBottomOf="@id/series_title"
+            tools:text="S01E01" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="@id/code"
+            app:layout_constraintStart_toStartOf="@id/code"
+            app:layout_constraintTop_toBottomOf="@id/code"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Rick Grimes part à la recherche de sa famille, après s'être réveillé d'un long coma, dans un monde infesté par les morts-vivants. Sur son chemin, il rencontre Morgan et Duane; qui vont lui apprendre les règles de survie." />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
